@@ -54,7 +54,7 @@ form.addEventListener("submit", async (e) => {
   const passVal = password.value.trim();
 
   try {
-    const response = await fetch("http://localhost:8080/api/login", {
+    const response = await fetch("https://web-production-54deb.up.railway.app/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -97,7 +97,7 @@ document.getElementById("createAccount").addEventListener("click", async () => {
   if (!validate()) return;
 
   try {
-    const response = await fetch("http://localhost:8080/api/register", {
+    const response = await fetch("https://web-production-54deb.up.railway.app/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
