@@ -1,0 +1,290 @@
+:root {
+    --fb-blue: #1877f2;
+    --fb-green: #42b72a;
+    --fb-bg: #f0f2f5;
+    --text: #1c1e21;
+    --muted: #606770;
+    --card: #fff;
+    --border: #dddfe2;
+    --link: #1877f2;
+    --error: #d93025;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+    background: var(--fb-bg);
+    color: var(--text);
+}
+
+/* Page shell */
+.page {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Content */
+.container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 72px 16px 24px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Left side */
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brand .logo {
+    font-size: clamp(40px, 6vw, 56px);
+    font-weight: 700;
+    color: var(--fb-blue);
+    letter-spacing: -1px;
+    line-height: 1;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.brand .tagline {
+    font-size: clamp(18px, 2.6vw, 28px);
+    font-weight: 400;
+    color: #1c1e21;
+}
+
+/* Right card */
+.card {
+    background: var(--card);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+}
+
+form {
+    display: grid;
+    gap: 12px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 14px;
+}
+
+.input input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+}
+
+.input.error {
+    border-color: var(--error);
+}
+
+.error-text {
+    color: var(--error);
+    font-size: 12px;
+    margin: -4px 0 4px;
+    display: none;
+}
+
+.error-text.show {
+    display: block;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 48px;
+    font-size: 18px;
+}
+
+.btn.primary {
+    background: var(--fb-blue);
+    color: #fff;
+}
+
+.btn.primary:active {
+    filter: brightness(0.95);
+}
+
+.link {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.sep {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+    margin: 6px 0;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.sep::before,
+.sep::after {
+    content: '';
+    height: 1px;
+    background: #e5e7eb;
+    display: block;
+}
+
+.create-account {
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+    padding-bottom: 10px;
+}
+
+.btn.green {
+    background: var(--fb-green);
+    color: #fff;
+    height: 44px;
+    font-size: 17px;
+}
+
+.create-page {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.create-page a {
+    color: var(--text);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.create-page a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+    color: #737373;
+    font-size: 12px;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    line-height: 20px;
+}
+
+.footer-row a {
+    color: #737373;
+    text-decoration: none;
+}
+
+.footer-row a:hover {
+    text-decoration: underline;
+}
+
+/* Password toggle */
+.toggle {
+    user-select: none;
+    font-size: 14px;
+    color: #4b5563;
+    cursor: pointer;
+    padding-left: 8px;
+    white-space: nowrap;
+}
+
+/* Small screens */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-top: 48px;
+    }
+
+    .brand {
+        align-items: center;
+        text-align: center;
+    }
+
+    .brand .tagline {
+        font-size: 24px;
+    }
+}
+
+/* Ultra narrow */
+@media (max-width: 360px) {
+    .btn {
+        font-size: 16px;
+        height: 44px;
+    }
+
+    .btn.green {
+        font-size: 16px;
+        height: 42px;
+    }
+}
+
+/* Tiny toast */
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    background: #111827;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}

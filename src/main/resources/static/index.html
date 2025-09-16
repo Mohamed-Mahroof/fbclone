@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Facebook – log in or sign up</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="page" role="document">
+    <main>
+      <section class="container" aria-label="Login section">
+
+        <!-- Left: Brand & tagline -->
+        
+        <div class="brand" aria-hidden="false">
+          <div class="logo" aria-label="facebook logo text">facebook</div>
+          <p class="tagline">Facebook helps you connect and share with the people in your life.</p>
+        </div>
+
+        <!-- Right: Login card -->
+        
+        <div>
+          <div class="card" role="form" aria-labelledby="login-heading">
+            <form id="loginForm" novalidate>
+              <h1 id="login-heading" style="position:absolute;left:-9999px">Log in to Facebook</h1>
+
+              <label class="input" id="emailField">
+                <input id="email" name="email" type="text" placeholder="Email address or phone number"
+                  autocomplete="username" aria-label="Email address or phone number" />
+              </label>
+              <div id="emailError" class="error-text">Please enter your email or mobile number.</div>
+
+              <div class="input" id="passwordField">
+                <input id="password" name="password" type="password" placeholder="Password"
+                  autocomplete="current-password" aria-label="Password" />
+                <span id="togglePw" class="toggle" aria-live="polite" aria-pressed="false">Show</span>
+              </div>
+              <div id="passwordError" class="error-text">Please enter your password.</div>
+
+              <button type="submit" class="btn primary" aria-label="Log in">Log in</button>
+
+              <a class="link" href="#" id="forgot">Forgotten password?</a>
+
+              <div class="sep" aria-hidden="true">or</div>
+
+              <div class="create-account">
+                <button type="button" class="btn green" id="createAccount">Create new account</button>
+              </div>
+            </form>
+            <p id="response" style="text-align:center;color:red;font-weight:bold;"></p>
+          </div>
+
+          <div class="create-page"> <a href="#" id="createPage">Create a Page</a> for a celebrity, brand or business.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer links (simplified) -->
+    <footer>
+      <div class="footer-inner" aria-label="Footer">
+        <div class="footer-row" style="margin-bottom: 8px;">
+          <a href="#">English (UK)</a>
+          <a href="#">தமிழ்</a>
+          <a href="#">हिन्दी</a>
+          <a href="#">ಕನ್ನಡ</a>
+          <a href="#">اردو</a>
+          <a href="#">മലയാളം</a>
+          <a href="#">తెలుగు</a>
+          <a href="#">বাংলা</a>
+          <a href="#">മലയാളം</a>
+          <a href="#">Español</a>
+          <a href="#">Português (Brasil)</a>
+        </div>
+        <hr style="border:none;border-top:1px solid #e5e7eb;margin:8px 0 12px;" />
+        <div class="footer-row">
+          <a href="#">Sign Up</a>
+          <a href="#">Log in</a>
+          <a href="#">Messenger</a>
+          <a href="#">Facebook Lite</a>
+          <a href="#">Video</a>
+          <a href="#">Places</a>
+          <a href="#">Games</a>
+          <a href="#">Marketplace</a>
+          <a href="#">Meta Pay</a>
+          <a href="#">Meta Store</a>
+          <a href="#">Meta Quest</a>
+          <a href="#">Meta AI</a>
+          <a href="#">Instagram</a>
+          <a href="#">Threads</a>
+          <a href="#">Fundraisers</a>
+          <a href="#">Services</a>
+          <a href="#">Voting Information Centre</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Privacy Centre</a>
+          <a href="#">Cookies</a>
+          <a href="#">Ad choices</a>
+          <a href="#">Terms</a>
+          <a href="#">Help</a>
+          <span>Meta © 2025</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
