@@ -11,3 +11,9 @@ Technologies Used
   Front-end: HTML, CSS, JavaScript
   Back-end (optional): Java Spring Boot, MySQL
   Version Control: Git & GitHub
+
+## ⚠️ Disclaimer  ##
+This project is created **only for learning and demo purposes**.  
+- User passwords are stored in **plain text** (not encrypted).  
+- **Do not** use real credentials while testing this project.  
+- Security best practices such as password hashing, input validation, and HTTPS are **not implemented** here.  
